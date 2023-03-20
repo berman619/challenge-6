@@ -15,12 +15,27 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-    <main>
-        <aside>
+    <main class="container">
+        <div class="row">
+            <aside class="col-sm-12 col-lg-3">
+                <form id="user-form">
+                    <label><strong>Search for a City:</strong></label>
+                    <input type="text" placeholder="Enter a city" class="user-input" />
+                    <button id="submit" class="user-search-btn">Search</button>
+                </form>
+              <div id="search-results"></div>             
         </aside>
-        <section>
+        <section id="city-container">
+            <div class="card">
+                <div class="card-body">
+                  This is some text within a card body.
+                </div>
+              </div>
         </section>
-    <script src="assets/js/script.js"></script>
+        <section id="forecast-container">
+            <h2>5-Day Forecast:</h2>
+        </section>
+    <script src="/script.js"></script>
 </body>
 
 </html>
