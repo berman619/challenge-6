@@ -1,0 +1,41 @@
+.container-fluid {
+    padding: 0;
+  }
+  
+  aside {
+    background-color: #f7f7f7;
+    padding: 20px;
+  }
+  
+  #search-results {
+    margin-top: 20px;
+  }
+  
+  #city-container {
+    margin-top: 20px;
+  }
+  
+  #city-container .card {
+    margin-bottom: 20px;
+  }
+  
+  #forecast-container {
+    margin-top: 20px;
+  }
+  
+  #forecast-container .card {
+    padding: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    #city-container {
+      padding-right: 20px;
+    }
+    #forecast-container {
+      padding-right: 20px;
+    }
+    .card {
+      height: 100%;
+    }
+  }
+  
