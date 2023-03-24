@@ -3,6 +3,7 @@ var cityContainer = document.querySelector("#city-container");
 var forecastContainer = document.querySelector("#forecast-container");
 var searchButton = document.querySelector("#submit");
 var apiKey = "45e4a84ada581d56153282a0a986d540";
+var apiKey2 = "c45b9656f5f7be5716af18aff808beb6";
 var userInput = document.querySelector(".user-input");
 
 function handleFormSubmit(event) {
@@ -25,7 +26,7 @@ function getWeather(city) {
             console.log(data);
             displayCurrentWeather(data);
 
-            var getForecastURL = "https://api.openweathermap.org/data/2.5/forecast?units=imperial&lat=" + data.coord.lat + "&lon=" + data.coord.lon + "&appid=" + apiKey;
+            var getForecastURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + data.coord.lat + "&lon=" + data.coord.lon + "&units=imperial&appid=" + apiKey2;
             fetch(getForecastURL)
                 .then(function (response) {
                     return response.json()
@@ -61,7 +62,7 @@ function displayCurrentWeather(weatherData) {
 function displayForecastWeather(forecastData) {
     var forecastContainerHtml = "";
 
-    for (var i=0; i < 5; i++) {
+    for (var i=0; i < 40; i+=8) {
     var forecastDateTime = new Date(forecastData.list[i].dt * 1000);
     var forecastDate = forecastDateTime.toLocaleDateString();
     var forecastDayOfWeek = forecastDateTime.toLocaleDateString("en-US", {weekday: "long"});
@@ -71,7 +72,7 @@ function displayForecastWeather(forecastData) {
     var humidity = forecastData.list[i].main.humidity + "%";
 
     var forecastCardHtml = `
-    <div class="card col-sm-12 col-md-6 col-lg-2">
+    <div class="card col-sm-12 col-md-5 col-lg-2 forecast-card">
       <div class="card-body">
         <h5>${forecastDayOfWeek}</h5>
         <h6>${forecastDate}</h6>

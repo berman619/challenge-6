@@ -1,41 +1,100 @@
-.container-fluid {
-    padding: 0;
-  }
-  
-  aside {
-    background-color: #f7f7f7;
-    padding: 20px;
-  }
-  
-  #search-results {
-    margin-top: 20px;
-  }
-  
-  #city-container {
-    margin-top: 20px;
-  }
-  
-  #city-container .card {
-    margin-bottom: 20px;
-  }
-  
-  #forecast-container {
-    margin-top: 20px;
-  }
-  
-  #forecast-container .card {
-    padding: 10px;
-  }
-  
-  @media (min-width: 768px) {
-    #city-container {
-      padding-right: 20px;
-    }
-    #forecast-container {
-      padding-right: 20px;
-    }
-    .card {
-      height: 100%;
-    }
-  }
-  
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #e9edf5;
+  color: #3d3d3d;
+}
+
+header {
+  background-color: #3d3d3d;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+form {
+  color: #3d3d3d;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.user-input {
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.user-search-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2a97f1;
+  color: #fff;
+  cursor: pointer;
+}
+
+#search-results {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#search-results p {
+  color: #3d3d3d;
+}
+
+main {
+  padding: 50px 0;
+  margin-top: -20px;
+}
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #3d3d3d;
+  text-align: center;
+}
+
+h4 {
+  color: #7f95dc;
+}
+
+#city-container, #forecast-container {
+  background-color: #f7f7f7;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#city-container .card {
+  background-color: #fff;
+  border: none;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#city-container h3 {
+  color: #3d3d3d;
+  margin-bottom: 20px;
+}
+
+#forecast-container .card {
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#forecast-container h5 {
+  color: #3d3d3d;
+  margin-bottom: 10px;
+}
+
+.forecast-card {
+  width: 20%;
+}
