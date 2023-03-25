@@ -8,7 +8,7 @@ While completing this project, I referenced materials from the Columbia Coding B
 
 ## Screenshot of Application
 
-![screenshot](/assets/images/Screenshot%202023-03-23%20at%209.59.42%20PM.png)
+![screenshot](assets/images/Screenshot%202023-03-23%20at%209.59.42%20PM.png)
 
 ## Deployed Application
 
