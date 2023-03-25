@@ -1,6 +1,7 @@
 var searchResults = document.querySelector("#search-results");
 var cityContainer = document.querySelector("#city-container");
 var forecastContainer = document.querySelector("#forecast-container");
+forecastContainer.classList.add("d-flex", "flex-wrap");
 var searchButton = document.querySelector("#submit");
 var apiKey = "45e4a84ada581d56153282a0a986d540";
 var apiKey2 = "c45b9656f5f7be5716af18aff808beb6";
@@ -38,7 +39,7 @@ function getWeather(city) {
         savedCities.push(city);
         localStorage.setItem("savedCities", JSON.stringify(savedCities));
     
-        // Update list of saved cities
+        // update list of saved cities
         displaySavedCities();
     });
 }
@@ -80,7 +81,7 @@ function displayForecastWeather(forecastData) {
     var humidity = forecastData.list[i].main.humidity + "%";
 
     var forecastCardHtml = `
-    <div class="card col-sm-12 col-md-5 col-lg-2 forecast-card">
+    <div class="card col-sm-12 col-md-5 col-lg-auto forecast-card">
       <div class="card-body">
         <h5>${forecastDayOfWeek}</h5>
         <h6>${forecastDate}</h6>
@@ -91,11 +92,13 @@ function displayForecastWeather(forecastData) {
       </div>
     </div>
   `;
+  
 
   forecastContainerHtml += forecastCardHtml;
 }
 
 forecastContainer.innerHTML = forecastContainerHtml;
+forecastContainer.classList.add("d-flex", "justify-content-around");
 }
 
   function getSavedCities() {
@@ -124,7 +127,7 @@ forecastContainer.innerHTML = forecastContainerHtml;
     var searchResults = document.getElementById("search-results");
     searchResults.innerHTML = savedCitiesHtml;
   
-    // Add event listeners to saved city buttons
+    // add event listeners to saved city buttons
     var savedCityButtons = document.querySelectorAll(".saved-city button");
     for (var i = 0; i < savedCityButtons.length; i++) {
       savedCityButtons[i].addEventListener("click", function() {
@@ -134,7 +137,7 @@ forecastContainer.innerHTML = forecastContainerHtml;
     }
   }
   
-  // Call the displaySavedCities function to update the list of saved cities
+  // call the displaySavedCities function to update the list of saved cities
   displaySavedCities();
 
 searchButton.addEventListener("click", handleFormSubmit);
